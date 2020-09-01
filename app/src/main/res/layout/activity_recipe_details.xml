@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/recipeDetailsProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_recipe_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/recipeNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Title recipe"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/recipeDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="description description description"
+        android:textSize="18sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <TextView
+        android:id="@+id/recipeInstructionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Instruction Instruction Instruction"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="italic"
+
+        />
+            <TextView
+                android:id="@+id/recipeDifficultyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Difficulty Difficulty Difficulty"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"
+                />
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="0.0"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/similarRecipesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Similar recipes:"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/similarRecipesList"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_recipe_similar" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
